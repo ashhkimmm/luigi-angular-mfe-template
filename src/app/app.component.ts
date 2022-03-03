@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import * as LuigiClient from '@luigi-project/client';
+import { LinkManager } from "@luigi-project/client";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'luigi-angular-mfe-template';
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    LuigiClient.luigiClientInit();
+  }
+
 }
